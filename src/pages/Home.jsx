@@ -1,8 +1,11 @@
 import React from "react";
 import mangala from "../assets/images/mangala.jpg";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const Home = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <div className="pt-24 space-y-40">
       {/* Hero Section */}
@@ -32,9 +35,9 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
         >
-          A passionate full-stack developer with a keen eye for detail and a
-          strong commitment to building functional, responsive and visually
-          appealing websites.
+          A passionate Web developer with a keen eye for detail and a strong
+          commitment to building functional, responsive and visually appealing
+          websites.
         </motion.p>
         <motion.a
           href="#projects"
@@ -50,9 +53,80 @@ const Home = () => {
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen flex items-center justify-center bg-neutral-200"
+        className="bg-white text-neutral-900 py-16 px-4 sm:px-8 max-w-4xl mx-auto"
       >
-        <h2 className="text-3xl font-semibold text-center">About Me</h2>
+        <div className="text-center mb-10">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">About Me</h2>
+        </div>
+
+        <div className="text-base sm:text-lg leading-relaxed text-neutral-800 space-y-6">
+          <p>
+            My name is <span className="font-semibold">Ronald Otieno</span> —
+            though most people know me as{" "}
+            <span className="text-red-700 font-semibold">Mangala</span>.
+          </p>
+          <p>
+            After graduating with a diploma in ICT, I dove headfirst into web
+            development, driven by a passion to create tools that are not just
+            functional, but meaningful.
+          </p>
+          <p>
+            Through countless hours of hands-on practice and building real-world
+            projects, I’ve grown into a <strong>full-stack developer</strong>{" "}
+            who values clean code, responsiveness, and thoughtful user
+            experience.
+          </p>
+          <AnimatePresence>
+            {showMore && (
+              <motion.div
+                key="moreText"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <div className="space-y-6">
+                  <p>
+                    My journey has shaped a strong sense of creativity,
+                    resilience, and attention to detail — qualities I bring into
+                    every project I work on.
+                  </p>
+                  <p>
+                    Whether it’s crafting seamless user interfaces or designing
+                    efficient backend systems, I aim to build digital
+                    experiences that solve real problems.
+                  </p>
+                  <p>
+                    I’m currently focused on building personalized apps that
+                    reflect real stories and connect deeply with users. I
+                    believe every line of code is a chance to make something{" "}
+                    <span className="italic">
+                      genuine, human, and impactful
+                    </span>
+                    .
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <button
+            onClick={() => setShowMore(!showMore)}
+            className="mt-6 text-red-700 font-medium hover:underline focus:outline-none"
+          >
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={showMore ? "less" : "more"}
+                initial={{ opacity: 0, rotate: -10, scale: 0.95 }}
+                animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                exit={{ opacity: 0, rotate: 10, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+              >
+                {showMore ? "Show Less" : "Read More"}
+              </motion.span>
+            </AnimatePresence>
+          </button>
+        </div>
       </section>
 
       {/* Skills Section */}
