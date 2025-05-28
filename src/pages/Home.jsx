@@ -71,10 +71,9 @@ const Home = () => {
             functional, but meaningful.
           </p>
           <p>
-            Through countless hours of hands-on practice and building real-world
-            projects, I’ve grown into a <strong>full-stack developer</strong>{" "}
-            who values clean code, responsiveness, and thoughtful user
-            experience.
+            Through real-world projects and continuous practise, I’ve grown into
+            a <strong>full-stack developer</strong> who values simplicty,
+            perfomance, and meaningful user experience.
           </p>
           <AnimatePresence>
             {showMore && (
@@ -92,14 +91,15 @@ const Home = () => {
                     every project I work on.
                   </p>
                   <p>
-                    Whether it’s crafting seamless user interfaces or designing
+                    Whether it’s crafting user-friendly interfaces or designing
                     efficient backend systems, I aim to build digital
-                    experiences that solve real problems.
+                    experiences that solve real world problems.
                   </p>
                   <p>
                     I’m currently focused on building personalized apps that
                     reflect real stories and connect deeply with users. I
-                    believe every line of code is a chance to make something{" "}
+                    believe every build whether crafted in code or design is an
+                    opportunity to make something{" "}
                     <span className="italic">
                       genuine, human, and impactful
                     </span>
