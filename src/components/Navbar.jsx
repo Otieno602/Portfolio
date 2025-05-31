@@ -67,6 +67,15 @@ const Navbar = () => {
             </li>
             <li>
               <a
+                href="#about"
+                className="text-lg hover:text-red-700"
+                onClick={() => setIsOpen(false)}
+              >
+                Skills
+              </a>
+            </li>
+            <li>
+              <a
                 href="#projects"
                 className="text-lg hover:text-red-700"
                 onClick={() => setIsOpen(false)}
