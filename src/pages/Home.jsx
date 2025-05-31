@@ -30,11 +30,11 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div className="pt-24 space-y-40">
+    <div className="pt-24">
       {/* Hero Section */}
       <section
         id="hero"
-        className="min-h-[90vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 space-y-4 bg-neutral-100 max-w-3xl mx-auto"
+        className="py-8 min-h-[90vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 space-y-4 bg-neutral-100 max-w-3xl mx-auto"
       >
         <motion.img
           src={mangala}
@@ -76,7 +76,7 @@ const Home = () => {
       {/* About Section */}
       <section
         id="about"
-        className="bg-white text-neutral-900 py-16 px-4 sm:px-8 max-w-4xl mx-auto"
+        className="bg-white text-neutral-900 py-8 px-4 sm:px-8 max-w-4xl mx-auto"
       >
         <div className="text-center mb-10">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">About Me</h2>
@@ -155,7 +155,7 @@ const Home = () => {
       {/* Skills Section */}
       <section
         id="skills"
-        className="bg-neutral-100 text-neutral-900 py-16 px-4 sm:px-8 max-w-4xl mx-auto"
+        className="bg-neutral-100 text-neutral-900 py-8 px-4 sm:px-8 max-w-4xl mx-auto"
       >
         <div className="text-center mb-10">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -207,11 +207,9 @@ const Home = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Projects
-          </h2>
+      <section id="projects" className="py-8 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Projects</h2>
 
           {/* Birthday Reminder Project */}
           <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-100 rounded-2xl shadow p-6 mb-8">
@@ -304,11 +302,9 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Services
-          </h2>
+      <section id="services" className="py-8 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Services</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
             These are some of the ways I can help you or your business online.
             Whether you need a full website, backend system, or just a few
@@ -318,7 +314,7 @@ const Home = () => {
           <ul className="space-y-6">
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">🖥️</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
                   Website Design & Development
                 </h3>
@@ -331,7 +327,7 @@ const Home = () => {
 
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">🔗</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
                   Custom Backend APIs
                 </h3>
@@ -344,7 +340,7 @@ const Home = () => {
 
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">🔐</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
                   Authentication Systems
                 </h3>
@@ -357,7 +353,7 @@ const Home = () => {
 
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">📅</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
                   Birthday & Event Reminder Apps
                 </h3>
@@ -370,7 +366,7 @@ const Home = () => {
 
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">🛠️</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
                   UI Fixes and Responsive Tweaks
                 </h3>
@@ -383,9 +379,9 @@ const Home = () => {
 
             <li className="flex items-start gap-4">
               <span className="text-red-600 text-xl">💼</span>
-              <div>
+              <div className="text-left">
                 <h3 className="text-xl font-semibold text-gray-800">
-                  Portfolio Creation Help
+                  Portfolio Creation
                 </h3>
                 <p className="text-gray-600">
                   I help developers and creatives set up professional portfolios
@@ -406,30 +402,13 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contacts" className="py-16 px-4 bg-gray-50">
+      <section id="contacts" className="py-8 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Get in Touch
-          </h2>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-600 mb-8">
             Have a project in mind, want to work together, or just say hi? Fill
             out the form below and I’ll get back to you as soon as possible.
           </p>
-
-          {/* Status Message */}
-          {status === "success" && (
-            <div
-              ref={successRef}
-              className="mb-4 text-blue-600 bg-blue-100 px-4 py-2 rounded shadow scroll-mt-20"
-            >
-              Message sent successfully
-            </div>
-          )}
-          {status === "error" && (
-            <div className="mb-4 text-red-700 bg-red-100 px-4 py-2 rounded shadow">
-              Something went wrong. Please try again!
-            </div>
-          )}
 
           <form
             onSubmit={async (e) => {
