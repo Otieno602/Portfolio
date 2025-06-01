@@ -389,7 +389,21 @@ const Home = () => {
                 </p>
               </div>
             </li>
+
+            <li className="flex items-start gap-4">
+              <span className="text-green-600 text-xl">🔍</span>
+              <div className="text-left">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  Basic SEO Optimization
+                </h3>
+                <p className="text-gray-600">
+                  I set custom titles, descriptions, and preview content to help
+                  your site stand out on Google, WhatsApp, and social platforms.
+                </p>
+              </div>
+            </li>
           </ul>
+
           <div className="text-center mt-12">
             <a
               href="#contacts"
