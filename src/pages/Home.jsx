@@ -4,6 +4,7 @@ import screenshot from "../assets/images/birthdayrem.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Download } from "lucide-react";
 
 import {
   FaHtml5,
@@ -58,19 +59,35 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
         >
-          A passionate Web developer with a keen eye for detail and a strong
-          commitment to building functional, responsive and visually appealing
-          websites.
+          I help businesses grow by building websites that do more than just
+          look good, they bring in customers, build trust and save time. Whether
+          you need to sell products, get more bookings or just be found online,
+          I'll create a web solution that works for you and your goals.
         </motion.p>
-        <motion.a
-          href="#projects"
-          className="mt-4 inline-block bg-red-700 text-white px-6 py-3 rounded-2xl text-lg hover:bg-red-800 transition duration-300 shadow-lg"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
-        >
-          View My Work
-        </motion.a>
+        <div className="flex items-center gap-6 mt-6">
+          <motion.a
+            href="#projects"
+            className="mt-4 inline-block bg-red-700 text-white px-6 py-3 rounded-2xl text-lg hover:bg-red-800 transition duration-300 shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
+          >
+            View My Work
+          </motion.a>
+          <motion.a
+            href="/Mangala_Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferer"
+            className="mt-4 flex items-center gap-4 border border-red-700 text-red-600 px-6 py-3 rounded-2xl text-lg hover:bg-red-700 hover:text-white transition shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.1, ease: "easeOut" }}
+          >
+            <Download size={18} />
+            Resume
+          </motion.a>
+        </div>
       </section>
 
       {/* About Section */}
