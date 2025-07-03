@@ -1,5 +1,5 @@
 import React from "react";
-import mangala from "../assets/images/mangala.jpg";
+import mangala from "../assets/images/mzinglo.jpeg";
 import screenshot from "../assets/images/birthdayrem.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -15,7 +15,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaLinkedin,
-  FaWhatsapp,
+  FaFacebook,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -558,11 +558,11 @@ const Home = () => {
             <HiOutlineMail className="hover:text-black transition" />
           </a>
           <a
-            href="https://wa.me/+254708140220"
+            href="https://www.facebook.com/wayne.ronnie.58"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaWhatsapp className="hover:text-black transition" />
+            <FaFacebook className="hover:text-black transition" />
           </a>
         </div>
         <p className="text-sm text-black mt-4">

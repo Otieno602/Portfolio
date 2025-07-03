@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet-async";
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   return (
@@ -47,6 +48,14 @@ function App() {
       <Navbar />
       <Home />
       {/* your Routes will go here */}
+      <a
+        href="https://wa.me/254708140220"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition"
+      >
+        <FaWhatsapp size={24} />
+      </a>
     </>
   );
 }
