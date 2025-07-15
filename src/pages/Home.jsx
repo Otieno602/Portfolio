@@ -551,13 +551,6 @@ const Home = () => {
             <FaLinkedin className="hover:text-black transition" />
           </a>
           <a
-            href="mailto:ronaldotieno237@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <HiOutlineMail className="hover:text-black transition" />
-          </a>
-          <a
             href="https://www.facebook.com/wayne.ronnie.58"
             target="_blank"
             rel="noopener noreferrer"
