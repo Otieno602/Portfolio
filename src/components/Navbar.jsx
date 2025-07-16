@@ -11,8 +11,8 @@ const Navbar = () => {
     <div className="font-sans bg-neutral-50 text-black">
       <nav className="bg-neutral-400 p-6 fixed w-full top-0 z-50 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold">
-            <span className="text-red-700">Ma</span>Ngala
+          <div className="text-base font-bold">
+            💻 Your Friendly<span className="text-red-700">Developer</span>
           </div>
 
           {/* Hamburger Button For Menu */}

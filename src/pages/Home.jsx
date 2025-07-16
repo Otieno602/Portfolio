@@ -16,6 +16,12 @@ import {
   FaGithub,
   FaLinkedin,
   FaFacebook,
+  FaLaptopCode,
+  FaComments,
+  FaShoppingCart,
+  FaSearch,
+  FaServer,
+  FaLock,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -24,11 +30,49 @@ import {
   SiVite,
   SiPostman,
 } from "react-icons/si";
-import { HiOutlineMail } from "react-icons/hi";
 
 const Home = () => {
   const [showMore, setShowMore] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const services = [
+    {
+      title: "Website Design & Development",
+      description:
+        "Crafting clean and responsive websites tailored for individuals, businesses, and startups that not only attract but also covert.",
+      icon: FaLaptopCode,
+    },
+    {
+      title: "Consultancy",
+      description:
+        "Delivering exceptional support to help customers spot what is missing or what could be done better.",
+      icon: FaComments,
+    },
+    {
+      title: "Ecommerce Solutions",
+      description:
+        "Enhancing seamless ecommerce experiences, ensuring customers dont just add to their cart but complete purchase.",
+      icon: FaShoppingCart,
+    },
+    {
+      title: "SEO Optimization",
+      description:
+        "Developing custom titles, descriptions and preview content to help your site stand out on search engines.",
+      icon: FaSearch,
+    },
+    {
+      title: "Custom Backend APIs",
+      description:
+        "Shaping backend systems using Node.js, Express and MongoDB.",
+      icon: FaServer,
+    },
+    {
+      title: "Authentication Systems",
+      description:
+        "Implementing secure user login, signup and password reset flows using modern authentication",
+      icon: FaLock,
+    },
+  ];
 
   return (
     <div className="pt-24">
@@ -51,7 +95,7 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
         >
-          Hi, I'm <span className="text-red-700">Mangala</span>
+          Hi, I'm Ronald 👋🏿
         </motion.h1>
         <motion.p
           className="text-lg sm:text-xl text-neutral-700 mb-6 max-w-2xl"
@@ -59,10 +103,8 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
         >
-          I help businesses grow by building websites that do more than just
-          look good, they bring in customers, build trust and save time. Whether
-          you need to sell products, get more bookings or just be found online,
-          I'll create a web solution that works for you and your goals.
+          I turn offline ideas into online tools - websites, systems and
+          strategies that work for you 24/7.
         </motion.p>
         <div className="flex items-center gap-6 mt-6">
           <motion.a
@@ -268,30 +310,14 @@ const Home = () => {
                 it for free.
               </p>
 
-              <div className="mt-4 flex space-x-4">
+              <div className="mt-4 flex justify-center space-x-4">
                 <a
                   href="https://birthdaybash-reminderapp.netlify.app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700"
+                  className="bg-red-600 text-white px-4 py-2 rounded-lg text-base hover:bg-red-700"
                 >
                   Live Demo
-                </a>
-                <a
-                  href="https://github.com/Otieno602/Birthday-Reminder-Frontend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-900"
-                >
-                  Frontend Code
-                </a>
-                <a
-                  href="https://github.com/Otieno602/Birthday-Reminder-Backend"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-red-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-900"
-                >
-                  Backend Code
                 </a>
               </div>
             </div>
@@ -319,115 +345,27 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-8 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Services</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            These are some of the ways I can help you or your business online.
-            Whether you need a full website, backend system, or just a few
-            tweaks — I’m here to deliver clean, reliable solutions.
-          </p>
-
-          <ul className="space-y-6">
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">🖥️</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Website Design & Development
-                </h3>
-                <p className="text-gray-600">
-                  I build modern, responsive websites using React, Tailwind, and
-                  Vite — from landing pages to full web apps.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">🔗</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Custom Backend APIs
-                </h3>
-                <p className="text-gray-600">
-                  I create backend systems using Node.js, Express, and MongoDB
-                  to power websites.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">🔐</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Authentication Systems
-                </h3>
-                <p className="text-gray-600">
-                  I implement secure user login, signup, and password reset
-                  flows using modern authentication practices.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">📅</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Birthday & Event Reminder Apps
-                </h3>
-                <p className="text-gray-600">
-                  Inspired by my own project, I can build custom reminders for
-                  birthdays, anniversaries, or special events.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">🛠️</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  UI Fixes and Responsive Tweaks
-                </h3>
-                <p className="text-gray-600">
-                  I can fix layout issues and make your website look great on
-                  all screen sizes.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-red-600 text-xl">💼</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Portfolio Creation
-                </h3>
-                <p className="text-gray-600">
-                  I help developers and creatives set up professional portfolios
-                  that showcase their work.
-                </p>
-              </div>
-            </li>
-
-            <li className="flex items-start gap-4">
-              <span className="text-green-600 text-xl">🔍</span>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Basic SEO Optimization
-                </h3>
-                <p className="text-gray-600">
-                  I set custom titles, descriptions, and preview content to help
-                  your site stand out on Google, WhatsApp, and social platforms.
-                </p>
-              </div>
-            </li>
-          </ul>
-
-          <div className="text-center mt-12">
-            <a
-              href="#contacts"
-              className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-red-700 transition"
-            >
-              Let’s work together →
-            </a>
+      <section id="services" className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8">What I Offer</h2>
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-200 p-6 rounded-2xl shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 ease-in-out"
+                >
+                  <div className="flex justify-center mb-4">
+                    <Icon size={28} />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 ">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{service.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -437,8 +375,8 @@ const Home = () => {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h2>
           <p className="text-gray-600 mb-8">
-            Have a project in mind, want to work together, or just say hi? Fill
-            out the form below and I’ll get back to you as soon as possible.
+            Have a project in mind? Fill out the form below and I’ll get back to
+            you as soon as possible.
           </p>
 
           <form
@@ -523,12 +461,14 @@ const Home = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              className="bg-red-700 text-white px-6 py-2 rounded-lg hover:bg-red-900 transition duration-300"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-red-700 text-white px-6 py-2 rounded-lg hover:bg-red-900 transition duration-300"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </div>
           </form>
         </div>
       </section>
