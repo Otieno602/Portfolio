@@ -1,6 +1,8 @@
 import React from "react";
 import mangala from "../assets/images/mzinglo.jpeg";
 import screenshot from "../assets/images/birthdayrem.png";
+import smallbizcampaign from "../assets/images/sbc3.jpeg";
+import smallbizpage from "../assets/images/rt2.jpeg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -22,6 +24,7 @@ import {
   FaSearch,
   FaServer,
   FaLock,
+  FaTiktok
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -283,12 +286,15 @@ const Home = () => {
                 Birthday Reminder App
               </h3>
 
-              <div className="flex flex-wrap gap-2 mt-2">
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
                   React
                 </span>
                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
                   Tailwind
+                </span>
+                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Vite
                 </span>
                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
                   Node.js
@@ -323,22 +329,104 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Placeholder Project Card */}
-          <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-50 rounded-2xl border border-dashed border-gray-300 p-6">
-            <div className="w-full md:w-1/2">
-              <div className="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 text-lg font-medium">
-                Project Screenshot Coming Soon
-              </div>
-            </div>
+          {/* SmallBiz Campaign Project */}
+          <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-100 rounded-2xl shadow p-6 mb-8">
+            <img
+              src={smallbizcampaign}
+              alt="Birthday Reminder App"
+              className="w-full md:w-1/2 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            />
 
             <div className="w-full md:w-1/2">
-              <h3 className="text-2xl font-semibold text-gray-700 flex items-center gap-2">
-                Next Project Loading...
+              <h3 className="text-2xl font-semibold text-gray-800">
+                Small Businesses Website Campaign
               </h3>
+
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  React
+                </span>
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Tailwind
+                </span>
+                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Vite
+                </span>
+              </div>
+
               <p className="mt-3 text-gray-600">
-                I’m currently working on my next full-stack project. It will be
-                added here soon. Stay tuned!
+                A simple but intentional campaign landing page built to change how small business owners see websites.
+
+                Instead of focusing on technical features, the page speaks directly to real struggles like lack of visibility, trust, consistent customers and positions a website as a practical solution.
+
+                This project reflects my approach to development: not just building interfaces, but creating tools that solve real-world problems and open opportunities for growth.
               </p>
+
+              <div className="mt-4 flex justify-center space-x-4">
+                <a
+                  href="https://smallbizcampaignlandingpage.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white px-4 py-2 rounded-lg text-base hover:bg-red-700"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Small Businesses Page Project */}
+          <div className="flex flex-col md:flex-row gap-8 items-center bg-gray-100 rounded-2xl shadow p-6 mb-8">
+            <img
+              src={smallbizpage}
+              alt="Birthday Reminder App"
+              className="w-full md:w-1/2 rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            />
+
+            <div className="w-full md:w-1/2">
+              <h3 className="text-2xl font-semibold text-gray-800">
+                Small Businesses Page Generator
+              </h3>
+
+              <div className="flex flex-wrap justify-center gap-2 mt-2">
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  React
+                </span>
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Tailwind
+                </span>
+                 <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Vite
+                </span>
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Node.js
+                </span>
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  Express
+                </span>
+                <span className="bg-gray-200 text-sm px-3 py-1 rounded-full text-gray-700">
+                  MongoDB
+                </span>
+              </div>
+
+              <p className="mt-3 text-gray-600">
+                A full-stack website generator that turns business information into a live website in seconds.
+
+                Designed for small business owners with little to no technical knowledge, the app removes barriers by converting simple inputs into a functional online presence.
+
+                It reflects my approach to development: building practical tools that create immediate value and real opportunities.
+              </p>
+
+              <div className="mt-4 flex justify-center space-x-4">
+                <a
+                  href="https://smallbizpagegenerator.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-600 text-white px-4 py-2 rounded-lg text-base hover:bg-red-700"
+                >
+                  Live Demo
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -496,6 +584,13 @@ const Home = () => {
             rel="noopener noreferrer"
           >
             <FaFacebook className="hover:text-black transition" />
+          </a>
+           <a
+            href="https://www.tiktok.com/@realerstech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok className="hover:text-black transition" />
           </a>
         </div>
         <p className="text-sm text-black mt-4">
